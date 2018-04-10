@@ -7,12 +7,12 @@ class Character:
 
 class Adventurer(Character):
     """ Adventurer inherits from Character """
+    def __init__(self, name):
+        super().__init__(name)
+        self.health = 25
     def speak(self, voice="Hello"):
         self.voice = voice
         return self.voice
-
-class Health(Adventurer):
-    """ Health inherits from Adventurer """
 
 class Damsel(Character):
     """ Damsel inherits from Character """
@@ -23,7 +23,6 @@ class Damsel(Character):
 x = Adventurer('I Jones')
 print(x.speak())
 
-
 d = Damsel('Damsel in Distress')
 print(d.speak())
 
@@ -33,8 +32,10 @@ Run = True
 
 while Run:
     print("hello")
+    z = Adventurer("Trey")
+    print(z.health)
 
-    ans = input("what do you have to say for yourself?\n>>>")
+    ans = input("What do you have to say?: ")
     if ans == "quit":
         run = False
-    input("you said: " + ans + "\n>>> ")
+    input("you said: " + ans + " do you have more to say? ")
