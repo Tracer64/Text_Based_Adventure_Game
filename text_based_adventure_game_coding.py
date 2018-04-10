@@ -36,6 +36,7 @@ while Run:
     print(z.health)
 
     ans = input("What do you have to say?: ")
+    print(ans)
     if ans == "quit":
-        run = False
-    input("you said: " + ans + " do you have more to say? ")
+        Run = False
+
